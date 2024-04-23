@@ -1,5 +1,6 @@
+import {format} from 'date-fns'
 
-const Post = ({title,summery,cover,content,createdAt}) => {
+const Post = ({title,summery,cover,content,createdAt,author}) => {
   return (
     <div className="post">
       <div className="image">
@@ -13,10 +14,10 @@ const Post = ({title,summery,cover,content,createdAt}) => {
           {title}
         </h2>
         <p className="info">
-          <a href="" className="author">
-            Shahzain
+          <a  className="author">
+            {author.username}
           </a>
-          <time>{createdAt}</time>
+          <time>{format(new Date(createdAt), " MMM d, yyyy HH:mm ")}</time>
         </p>
         <p className="summery">{summery}</p>
       </div>
