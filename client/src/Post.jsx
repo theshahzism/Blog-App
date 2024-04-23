@@ -1,5 +1,5 @@
 
-const Post = () => {
+const Post = ({title,summery,cover,content,createdAt}) => {
   return (
     <div className="post">
       <div className="image">
@@ -10,16 +10,15 @@ const Post = () => {
       </div>
       <div className="texts">
         <h2>
-          Tumblr tests ‘Communities,’ semi-private groups with their own
-          moderators and feeds
+          {title}
         </h2>
         <p className="info">
           <a href="" className="author">
             Shahzain
           </a>
-          <time>2024</time>
+          <time>{createdAt}</time>
         </p>
-        <p className="summery">Tumblr owner Automattic’s CEO Matt Mullenweg</p>
+        <p className="summery">{summery}</p>
       </div>
     </div>
   );
