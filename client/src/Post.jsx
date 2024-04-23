@@ -5,7 +5,7 @@ const Post = ({title,summery,cover,content,createdAt,author}) => {
     <div className="post">
       <div className="image">
         <img
-          src="https://techcrunch.com/wp-content/uploads/2019/08/GettyImages-1158411075.jpg?w=1390&crop=1"
+          src={"http://localhost:4000/"+cover}
           alt="Blog image"
         />
       </div>
